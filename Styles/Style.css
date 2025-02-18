@@ -1,0 +1,29 @@
+#Parrafo2{
+    color:rgb(219, 105, 119);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+#Titulo{
+    background-color: #7fffd4;
+}
+
+li > a{
+    color:rgb(9, 141, 88) !important;
+}
+
+.button{
+    background-color: rgb(49, 184, 199);
+}
+.button:hover{
+    background-color: blue;
+}
+li > a{
+    color:yellow;
+}
+
+
+
+
+
+
+
