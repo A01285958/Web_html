@@ -10,6 +10,16 @@ body{
     background-color: rgb(65, 186, 222);
 }
 
+#btnLogOut{
+    margin-left:auto;
+    background-color: rgb(230, 170, 190);
+    width: 200px;
+}
+
+#btnLogOut:hover{
+    background-color: rgb(233, 205, 218);
+}
+
 img{
     border-radius: 45px;
     max-width: 100%;
