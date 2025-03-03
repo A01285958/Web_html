@@ -1,0 +1,23 @@
+{
+  "name": "construccion-de-sotfware",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/A01285958/Web_html.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "bugs": {
+    "url": "https://github.com/A01285958/Web_html/issues"
+  },
+  "homepage": "https://github.com/A01285958/Web_html#readme",
+  "description": "",
+  "dependencies": {
+    "express": "^4.21.2"
+  }
+}
