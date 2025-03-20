@@ -5,12 +5,23 @@
 const username =document.getElementById("floatingInput");
 const password = document.getElementById("floatingPassword");
 
-const login = (event) => {
-    //console.log(username.value, password.value);
-    event.preventDefault(); // Evita que la pagina recargue antes de redirrecionar
-    if(username.value ==="rosy" && password.value === "123"){
-        sessionStorage.setItem("name","Rosila Muñoz");
-        window.location.href = "../Paginas/Home.html";
+const login = async(event) => {
+    event.preventDefault();
+    const user = {
+        username: username.value, 
+        password: password.value
+    };
+    const respuesta = await fetch("http://localhost:4000/login",{
+        method: "POST", 
+        headers:{"content-type":"application/json"},
+        body: JSON.stringify(user),
+    });
+
+    const data = await respuesta.json();
+    if(data.islogin){
+        sessionStorage.setItem("id", data.user.user_id);
+        sessionStorage.setItem("name",data.user.first_name);
+        window.location.href = "../Paginas/Home.html?user_id="+ data.user.user_id;
     }else{
         alert("Credenciales Incorrectas");
     }
