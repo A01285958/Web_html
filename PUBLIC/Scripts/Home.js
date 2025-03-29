@@ -30,6 +30,14 @@ const sendMsg = () => {
     msg.value ="";
 }
 
+const urlParams = new URLSearchParams(window.location.search);
+const userID = urlParams.get('user_id') || 1;
+const gameUrl = `../TC2005B/index.html?user_id=${userID}`;
+document.getElementById('videogame').src = gameUrl;
+
+const id = sessionStorage.getItem("id");
+document.getElementById("menuGame").setAttribute("href", "../Paginas/Game.html?user_id=" + id);
+
 send.addEventListener("click", sendMsg);
 
 msg.addEventListener("keydown", (e) => {
